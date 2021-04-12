@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>832</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mi bloc de notas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="mis_iconos.qrc">
+    <normaloff>:/principal.png</normaloff>:/principal.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>832</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionGuardar_como"/>
+    <addaction name="separator"/>
+    <addaction name="actionImprimir"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitar"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionCopiar"/>
+    <addaction name="actionPegar"/>
+    <addaction name="actionCortar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSeleccionar_todo"/>
+    <addaction name="separator"/>
+    <addaction name="actionDeshacer"/>
+    <addaction name="actionRehacer"/>
+   </widget>
+   <widget class="QMenu" name="menuFuente">
+    <property name="title">
+     <string>Fuente</string>
+    </property>
+    <widget class="QMenu" name="menuColor">
+     <property name="title">
+      <string>Color</string>
+     </property>
+     <property name="icon">
+      <iconset resource="mis_iconos.qrc">
+       <normaloff>:/opcion_color.png</normaloff>:/opcion_color.png</iconset>
+     </property>
+     <addaction name="actionColor_de_fuente"/>
+     <addaction name="actionColor_de_fondo"/>
+    </widget>
+    <addaction name="actionTipo_de_fuente"/>
+    <addaction name="menuColor"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de_Bloc_de_notas"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <widget class="QMenu" name="menuBuscar">
+     <property name="title">
+      <string>Buscar</string>
+     </property>
+     <property name="icon">
+      <iconset resource="mis_iconos.qrc">
+       <normaloff>:/buscar.png</normaloff>:/buscar.png</iconset>
+     </property>
+     <addaction name="actionEncontrar"/>
+     <addaction name="actionReemplazar"/>
+     <addaction name="separator"/>
+     <addaction name="actionEncontrar_anterior"/>
+     <addaction name="actionEncontrar_siguiente"/>
+    </widget>
+    <addaction name="menuBuscar"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuFuente"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionNuevo"/>
+   <addaction name="actionGuardar_como"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopiar"/>
+   <addaction name="actionPegar"/>
+   <addaction name="actionCortar"/>
+   <addaction name="actionSeleccionar_todo"/>
+   <addaction name="separator"/>
+   <addaction name="actionTipo_de_fuente"/>
+   <addaction name="actionColor_de_fuente"/>
+   <addaction name="actionColor_de_fondo"/>
+   <addaction name="separator"/>
+   <addaction name="actionImprimir"/>
+   <addaction name="separator"/>
+   <addaction name="actionAcerca_de_Bloc_de_notas"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuitar"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionDeshacer"/>
+   <addaction name="actionRehacer"/>
+   <addaction name="actionEncontrar"/>
+   <addaction name="actionReemplazar"/>
+   <addaction name="actionEncontrar_anterior"/>
+   <addaction name="actionEncontrar_siguiente"/>
+  </widget>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/abrir.png</normaloff>:/abrir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/nuevo.png</normaloff>:/nuevo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionGuardar_como">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/guardar_como.png</normaloff>:/guardar_como.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar como</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuitar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/quitar.png</normaloff>:/quitar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/copiar.png</normaloff>:/copiar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPegar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/pegar.png</normaloff>:/pegar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionCortar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/cortar.png</normaloff>:/cortar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cortar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionSeleccionar_todo">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/seleccionar_todo.png</normaloff>:/seleccionar_todo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Seleccionar todo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionTipo_de_fuente">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/tipo_fuente.png</normaloff>:/tipo_fuente.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tipo de fuente</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionColor_de_fuente">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/color_texto.png</normaloff>:/color_texto.png</iconset>
+   </property>
+   <property name="text">
+    <string>Color de fuente</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
+  </action>
+  <action name="actionColor_de_fondo">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/color_fondo.png</normaloff>:/color_fondo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Color de fondo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_Bloc_de_notas">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/principal.png</normaloff>:/principal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de Mi bloc de notas</string>
+   </property>
+  </action>
+  <action name="actionImprimir">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/imprimir.png</normaloff>:/imprimir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionDeshacer">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/deshacer.png</normaloff>:/deshacer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deshacer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRehacer">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/rehacer.png</normaloff>:/rehacer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rehacer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionEncontrar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/encontrar.png</normaloff>:/encontrar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Encontrar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+T</string>
+   </property>
+  </action>
+  <action name="actionReemplazar">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/reemplazar.png</normaloff>:/reemplazar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reemplazar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionEncontrar_anterior">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/encontrar_anterior.png</normaloff>:/encontrar_anterior.png</iconset>
+   </property>
+   <property name="text">
+    <string>Encontrar anterior</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionEncontrar_siguiente">
+   <property name="icon">
+    <iconset resource="mis_iconos.qrc">
+     <normaloff>:/encontrar_siguiente.png</normaloff>:/encontrar_siguiente.png</iconset>
+   </property>
+   <property name="text">
+    <string>Encontrar siguiente</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="mis_iconos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

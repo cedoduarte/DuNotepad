@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>tipo_fuente.png</file>
+        <file>pegar.png</file>
+        <file>opcion_color.png</file>
+        <file>nuevo.png</file>
+        <file>imprimir.png</file>
+        <file>guardar_como.png</file>
+        <file>cortar.png</file>
+        <file>copiar.png</file>
+        <file>color_texto.png</file>
+        <file>color_fondo.png</file>
+        <file>buscar.png</file>
+        <file>abrir.png</file>
+        <file>quitar.png</file>
+        <file>principal.png</file>
+        <file>seleccionar_todo.png</file>
+        <file>rehacer.png</file>
+        <file>reemplazar.png</file>
+        <file>encontrar_siguiente.png</file>
+        <file>encontrar_anterior.png</file>
+        <file>encontrar.png</file>
+        <file>deshacer.png</file>
+    </qresource>
+</RCC>
